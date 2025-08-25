@@ -1,14 +1,10 @@
-# 🛡️ **System Health Dashboard(Solsphere Assignment: Cross-Platform System Utility + Admin Dashboard)**
+# 🛡️ Solsphere System Monitor
 
-A cross-platform utility for monitoring and managing system health across macOS, Windows, and Linux.
+Cross‑platform system monitoring: a Python client agent reports machine health to a Flask API, and a React (Vite) dashboard visualizes it with filters, search, sorting, and CSV export.
 
-# �️ Solsphere System Monitor
-
-Cross‑platform system health monitoring: a Python client agent reports machine state to a Flask API, and a React (Vite) dashboard visualizes everything in real time.
-
-- � Client Agent (Python) — collects OS, disk encryption, update, AV, and sleep data
-- � Backend API (Flask + SQLite) — stores and serves machine status
-- ⚛️ Frontend (React + Vite) — filters, searches, sorts, and exports to CSV
+- 🐍 Client Agent (Python) — collects OS, disk encryption, update, antivirus, and sleep settings
+- 🐣 Backend API (Flask + SQLite) — stores and serves machine status
+- ⚛️ Frontend (React + Vite) — interactive dashboard with auto‑refresh and CSV export
 
 ![Dashboard](dashboard.png)
 
@@ -22,16 +18,49 @@ Cross‑platform system health monitoring: a Python client agent reports machine
 
 ---
 
-## Highlights
+## Table of Contents
+
+- [🚀 Features](#features)
+  - [Dashboard features](#dashboard-features)
+  - [Monitoring capabilities](#monitoring-capabilities)
+- [🏗️ Architecture](#architecture)
+- [📁 Project Structure](#project-structure)
+- [Quick Start](#quick-start-windows-powershell)
+- [How to run (Windows / macOS / Linux)](#how-to-run-windows--macos--linux)
+- [Configuration](#configuration)
+- [API Reference](#api-reference)
+- [Troubleshooting](#troubleshooting)
+- [Security & Production Notes](#security--production-notes)
+- [Author](#author)
+- [License](#license)
+- [Demo: Seed Multiple Machines](#demo-seed-multiple-machines)
+- [One-command demo](#one-command-demo-starts-backend-frontend-and-live-seeder)
+- [Contributing](#contributing)
+- [Support](#support)
+
+---
+
+## 🚀 Features
+
+### Dashboard features
 
 - Disk encryption, OS updates, antivirus, and sleep timeout visibility
 - Auto-refreshing dashboard with filters (OS and issue type), search, sort, and CSV export
 - Simple shared secret via X-API-Key header
 - Lightweight SQLite storage; easy to run locally
 
+### Monitoring capabilities
+
+- Operating System: Windows, macOS (Darwin), Linux
+- Disk Encryption: BitLocker/FileVault/LUKS detection heuristics
+- OS Updates: basic up-to-date vs update-available signal
+- Antivirus: installed/active status
+- Sleep Timeout: minutes until sleep
+- Last Check-in: ISO timestamp
+
 ---
 
-## Tech Stack
+## 🏗️ Architecture
 
 - Backend: Python, Flask, Flask-CORS, SQLite
 - Client: Python, requests, platform-specific shell/Powershell utilities
@@ -39,7 +68,7 @@ Cross‑platform system health monitoring: a Python client agent reports machine
 
 ---
 
-## Repo Structure
+## 📁 Project Structure
 
 ```
 backend/   Flask API (SQLite DB at backend/systems.db)
@@ -337,6 +366,24 @@ python3 run_demo.py
 ```
 
 Stop with Ctrl+C and the script will terminate all child processes.
+
+---
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
+
+Basic flow:
+- Fork the repo
+- Create a feature branch
+- Commit with clear messages
+- Open a PR describing the change and testing steps
+
+## Support
+
+If you run into issues:
+- Open a GitHub issue on this repository
+- Include your OS, Python/Node versions, and any console logs
 
 
 
