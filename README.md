@@ -14,6 +14,14 @@ Cross‑platform system health monitoring: a Python client agent reports machine
 
 ---
 
+## Demo video
+
+- Watch: [video.mp4](video.mp4)
+
+<video src="video.mp4" controls width="800" />
+
+---
+
 ## Highlights
 
 - Disk encryption, OS updates, antivirus, and sleep timeout visibility
