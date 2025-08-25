@@ -1,0 +1,127 @@
+/* Layout */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+#root { margin: auto; }
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  margin-bottom: 16px;
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.logo { width: 28px; height: 28px; display: grid; place-items: center; font-size: 18px; }
+.title { font-size: 18px; font-weight: 700; color: #111827; }
+
+/* Topbar variant (blue) */
+.topbar {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #ffffff;
+}
+.topbar .title { color: #ffffff; }
+.topbar .logo { color: #ffffff; }
+
+/* Section title */
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin: 12px 0 14px 0;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+.toolbar select,
+.toolbar .search {
+  padding: 6px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+}
+.toolbar .toggle { display: inline-flex; align-items: center; gap: 6px; color: #374151; }
+.muted { color: #6b7280; font-size: 12px; }
+
+.btn {
+  padding: 6px 12px;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover { background: #1d4ed8; }
+
+.spacer { margin-left: auto; }
+.stats-inline { color: #6b7280; font-size: 12px; }
+
+/* Table header/actions */
+.table-header { display: flex; justify-content: flex-end; margin: 6px 0; }
+.table-actions { display: flex; gap: 8px; }
+
+/* KPI styles removed (not used) */
+
+/* Table */
+.table-container { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; overflow: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+thead th {
+  text-align: left;
+  background: #f3f4f6;
+  color: #374151;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+thead th:hover { background: #e9ecef; }
+tbody td {
+  padding: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+tbody tr:hover { background: #f9fafb; }
+
+/* Issue row highlighting */
+.row-issue { background: #fdeaea; }
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+.badge-os { color: #2563eb; background: #eff6ff; border-color: #bfdbfe; }
+.badge-green { color: #065f46; background: #ecfdf5; border-color: #a7f3d0; }
+.badge-red { color: #991b1b; background: #fef2f2; border-color: #fecaca; }
+.text-red { color: #dc2626; font-weight: 600; }

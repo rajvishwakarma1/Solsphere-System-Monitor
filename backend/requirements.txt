@@ -1,0 +1,5 @@
+# Backend dependencies for Flask API
+Flask==3.0.3
+Flask-Cors==4.0.1
+
+
